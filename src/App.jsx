@@ -11,6 +11,7 @@ function App() {
       <h1>React World Tour</h1>
      
       <Countries></Countries>
+      
     </>
   )
 }
