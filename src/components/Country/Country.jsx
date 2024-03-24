@@ -7,20 +7,20 @@ const Country = ({country}) => {
 
   const [visited, setVisited] = useState(false);
   const handleVisited = () => {
-    setVisited(true);
+    setVisited(!visited);
   }
     return (
-        <div className='Country'>
+        <div className= {`Country ${visited && 'visited'}`} >
             <h3>{name?.common}</h3>
             <img src={flags.png} alt="" />
             <p>Population: {population}</p>
             <p>area: {area} </p>
             <p><small>Code: {cca3}</small></p>
-            <button onClick={handleVisited}>Visited</button>
-            {visited && 'I have visited Country.'}
+            <button onClick={handleVisited}>{visited ? 'Visited' : 'Going'}</button>
+            {visited ? 'I have visited Country.' : 'I want to visit this country'}
         </div>
     );
-};
+};   
 
 export default Country;
 
