@@ -1,5 +1,5 @@
 
-const Cart = () => {
+const Cart = ({cart}) => {
     return (
         <div>
             
